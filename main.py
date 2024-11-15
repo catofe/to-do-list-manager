@@ -11,10 +11,12 @@ class Tasks:
 
 
 class Task:
+   
     # task constructor
     def __init__(self):
         # constructor code here
         print("Object Created")
+        self.status = False
 
     # task destructor
     def __del__(self):
@@ -29,10 +31,7 @@ class Task:
         print("Deleting Task")
         # delete code here
 
-    def mark_complete(self):
+    def toggle_status(self):
+        self.status = not self.status    
         print("Task Complete")
         # mark_complete code here
-
-    def mark_incomplete(self):
-        print("Task Incomplete")
-        # mark_incomplete code here
