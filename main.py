@@ -12,22 +12,14 @@ class Tasks:
 
 class Task:
     # task constructor
-    def __init__(self):
+    def __init__(self, new_name):
         # constructor code here
-        print("Object Created")
-        self.title = ""
+        self.title = new_name
         self.status = False
 
-    # task destructor
-    def __del__(self):
-        # destructor code here
-        print("Object Destroyed")
-
     def edit(self, new_name):
-        print(f"Editing Task: {self.title} to {new_name}")
         self.title = new_name
-        print("Task name updated successfully.\n")
 
     def toggle_status(self):
-        self.status = not self.status    
-        print("Task Complete")
+        self.status = not self.status
+
