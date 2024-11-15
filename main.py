@@ -1,10 +1,14 @@
 class Tasks:
     # tasks constructor
     def __init__(self):
-        self.tasks_list = []
+        self.tasks_list = [] 
+
         # constructor code here
         print("Object Created")
 
+    def addtask (self, new_name): 
+        self.tasks_list.append (Task (new_name))
+        
     # tasks destructor
     def __del__(self):
         # destructor code here
@@ -17,7 +21,6 @@ class Tasks:
             
             if (task.status == True and status == True):
                 print(task.title)
-
 
 class Task:
     # task constructor
